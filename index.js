@@ -56,3 +56,8 @@ rightBtn.addEventListener("click", () => {
 rightBtn.addEventListener("mouseenter", e => {
     e.target.style.background = "green";
 }, false);
+
+rightBtn.addEventListener("mouseleave", e =>{
+    e.target.style.background = "yellow"
+}, false);
+
