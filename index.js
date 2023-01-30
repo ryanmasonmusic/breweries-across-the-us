@@ -52,3 +52,7 @@ rightBtn.addEventListener("click", () => {
         beerType.style.display = "none"
     }
 });
+
+rightBtn.addEventListener("mouseenter", e => {
+    e.target.style.background = "green";
+}, false);
