@@ -22,3 +22,11 @@ let btn = document.querySelector("#beerBtn");
 let brewList = document.querySelector(".brewList");
 
 brewList.style.display = "none";
+
+btn.addEventListener("click", () => {
+    if (brewList.style.display === "none"){
+        brewList.style.display = "block"
+    } else {
+        brewList.style.display = "none"
+    }
+});
