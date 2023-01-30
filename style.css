@@ -25,3 +25,11 @@ h1 {
     width: 50%;
     float: right;
 }
+
+#buttonContainer {
+    text-align: center;
+}
+
+#lists {
+    text-align: center;
+}
