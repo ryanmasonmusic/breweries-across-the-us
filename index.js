@@ -44,3 +44,11 @@ let rightBtn = document.querySelector("#beerTypeBtn");
 let beerType = document.querySelector(".beerType");
 
 beerType.style.display = "none";
+
+rightBtn.addEventListener("click", () => {
+    if (beerType.style.display === "none"){
+        beerType.style.display = "block"
+    } else {
+        beerType.style.display = "none"
+    }
+});
