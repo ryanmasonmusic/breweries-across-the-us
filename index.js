@@ -61,3 +61,7 @@ rightBtn.addEventListener("mouseleave", e =>{
     e.target.style.background = "yellow"
 }, false);
 
+fetch("http://localhost:3000/breweries")
+.then (response => response.json())
+.then ((beers) => beers.forEach((beers => renderBeers(beers))))
+
