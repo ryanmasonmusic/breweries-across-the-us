@@ -16,3 +16,9 @@ function renderBrewery(brewery){
         list.appendChild(li);
         return brewery
 };
+
+let btn = document.querySelector("#beerBtn");
+
+let brewList = document.querySelector(".brewList");
+
+brewList.style.display = "none";
