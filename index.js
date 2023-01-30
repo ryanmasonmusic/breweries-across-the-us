@@ -38,3 +38,9 @@ btn.addEventListener("mouseenter", e => {
 btn.addEventListener("mouseleave", e =>{
     e.target.style.background = "red"
 }, false);
+
+let rightBtn = document.querySelector("#beerTypeBtn");
+
+let beerType = document.querySelector(".beerType");
+
+beerType.style.display = "none";
