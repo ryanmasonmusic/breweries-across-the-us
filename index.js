@@ -30,3 +30,7 @@ btn.addEventListener("click", () => {
         brewList.style.display = "none"
     }
 });
+
+btn.addEventListener("mouseenter", e => {
+    e.target.style.background = "green";
+}, false);
