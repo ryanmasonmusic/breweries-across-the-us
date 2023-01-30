@@ -34,3 +34,7 @@ btn.addEventListener("click", () => {
 btn.addEventListener("mouseenter", e => {
     e.target.style.background = "green";
 }, false);
+
+btn.addEventListener("mouseleave", e =>{
+    e.target.style.background = "red"
+}, false);
