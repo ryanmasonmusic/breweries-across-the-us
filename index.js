@@ -65,3 +65,9 @@ fetch("http://localhost:3000/breweries")
 .then (response => response.json())
 .then ((beers) => beers.forEach((beers => renderBeers(beers))))
 
+function renderBeers(beers) {
+    let rightLi = document.createElement("li");
+       rightLi.innerText = beers.brewery_type;
+       rightList.appendChild(rightLi);
+       return beers
+   };
