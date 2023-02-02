@@ -67,17 +67,17 @@ function renderBeers(brewery) {
    };
 
 
-let rightBtn = document.querySelector("#");
+let rightBtn = document.querySelector("#beerLocationBtn");
 
-let beerType = document.querySelector(".beerType");
+let beerLocation = document.querySelector(".beerLocation");
    
-beerType.style.display = "none";   
+beerLocation.style.display = "none";   
 
 rightBtn.addEventListener("click", () => {
-    if (beerType.style.display === "none"){
-        beerType.style.display = "block"
+    if (beerLocation.style.display === "none"){
+        beerLocation.style.display = "block"
     } else {
-        beerType.style.display = "none"
+        beerLocation.style.display = "none"
     }
 });
 
