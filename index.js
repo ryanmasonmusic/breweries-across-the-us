@@ -6,15 +6,13 @@ let breweryList = [];
 
 fetch("http://localhost:3000/breweries")
 .then (response => response.json())
-.then ((brewery) => console.log(brewery))
-// console.log(breweryList)
-// brewery.forEach((brewery => renderBrewery(brewery))))
+.then ((brewery)=>brewery.forEach((brewery => {renderBrewery(brewery);renderBeers(brewery)})))
 
 function renderBrewery(brewery){
     let li = document.createElement("li");
         li.innerText = brewery.name;
         list.appendChild(li);
-        return brewery
+        return brewery;
 };
 
 let btn = document.querySelector("#beerBtn");
@@ -61,13 +59,9 @@ rightBtn.addEventListener("mouseleave", e =>{
     e.target.style.background = "yellow"
 }, false);
 
-fetch("http://localhost:3000/breweries")
-.then (response => response.json())
-.then ((beers) => beers.forEach((beers => renderBeers(beers))))
-
 function renderBeers(beers) {
     let rightLi = document.createElement("li");
        rightLi.innerText = beers.brewery_type;
        rightList.appendChild(rightLi);
-       return beers
+       return beers;
    };
