@@ -37,11 +37,41 @@ btn.addEventListener("mouseleave", e =>{
     e.target.style.background = "red"
 }, false);
 
-let rightBtn = document.querySelector("#beerTypeBtn");
+let middleBtn = document.querySelector("#beerTypeBtn");
 
 let beerType = document.querySelector(".beerType");
 
 beerType.style.display = "none";
+
+middleBtn.addEventListener("click", () => {
+    if (beerType.style.display === "none"){
+        beerType.style.display = "block"
+    } else {
+        beerType.style.display = "none"
+    }
+});
+
+middleBtn.addEventListener("mouseenter", e => {
+    e.target.style.background = "green";
+}, false);
+
+middleBtn.addEventListener("mouseleave", e =>{
+    e.target.style.background = "yellow"
+}, false);
+
+function renderBeers(brewery) {
+    let middleLi = document.createElement("li");
+       middleLi.innerText = brewery.brewery_type;
+       rightList.appendChild(middleLi);
+       return brewery;
+   };
+
+
+let rightBtn = document.querySelector("#");
+
+let beerType = document.querySelector(".beerType");
+   
+beerType.style.display = "none";   
 
 rightBtn.addEventListener("click", () => {
     if (beerType.style.display === "none"){
@@ -59,12 +89,6 @@ rightBtn.addEventListener("mouseleave", e =>{
     e.target.style.background = "yellow"
 }, false);
 
-function renderBeers(brewery) {
-    let rightLi = document.createElement("li");
-       rightLi.innerText = brewery.brewery_type;
-       rightList.appendChild(rightLi);
-       return brewery;
-   };
 
 function renderLocation(brewery){
     let rightLi = document.createElement("li");
