@@ -59,9 +59,16 @@ rightBtn.addEventListener("mouseleave", e =>{
     e.target.style.background = "yellow"
 }, false);
 
-function renderBeers(beers) {
+function renderBeers(brewery) {
     let rightLi = document.createElement("li");
-       rightLi.innerText = beers.brewery_type;
+       rightLi.innerText = brewery.brewery_type;
        rightList.appendChild(rightLi);
-       return beers;
+       return brewery;
    };
+
+function renderLocation(brewery){
+    let rightLi = document.createElement("li");
+        rightLi.innerText = brewery.state;
+        rightList.appendChild(rightLi);
+        return brewery;
+}
