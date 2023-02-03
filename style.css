@@ -6,30 +6,33 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-     width: 50%; 
+     width: 33%; 
  }
+
+ #buttonContainer {
+    text-align: center;
+}
 
  #beerBtn {
     background-color: red;
 }
 
+#lists {
+    display: flex;
+} 
+
+
 #breweryList {
-    text-align: right;
+    text-align: left;
     list-style-type: none;
-    float: left;
 }
 
 #beerList {
-    text-align: left;
+    text-align: center;
     list-style-type: none;
-    width: 50%;
-    float: right;
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
-#buttonContainer {
-    text-align: center;
-}
-
-#lists {
-    text-align: center;
+#locationList{
+    text-align: right;
+    list-style-type: none; 
 }

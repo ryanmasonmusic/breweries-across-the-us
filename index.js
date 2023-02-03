@@ -1,12 +1,14 @@
 let list = document.getElementById("breweryList");
 
-let rightList = document.getElementById("beerList");
+let middleList = document.getElementById("beerList")
+
+let rightList = document.getElementById("locationList");
 
 let breweryList = [];
 
 fetch("http://localhost:3000/breweries")
 .then (response => response.json())
-.then ((brewery)=>brewery.forEach((brewery => {renderBrewery(brewery);renderBeers(brewery)})))
+.then ((brewery)=>brewery.forEach((brewery => {renderBrewery(brewery);renderBeers(brewery);renderLocation(brewery)})))
 
 function renderBrewery(brewery){
     let li = document.createElement("li");
@@ -37,6 +39,10 @@ btn.addEventListener("mouseleave", e =>{
     e.target.style.background = "red"
 }, false);
 
+
+
+
+
 let middleBtn = document.querySelector("#beerTypeBtn");
 
 let beerType = document.querySelector(".beerType");
@@ -62,9 +68,12 @@ middleBtn.addEventListener("mouseleave", e =>{
 function renderBeers(brewery) {
     let middleLi = document.createElement("li");
        middleLi.innerText = brewery.brewery_type;
-       rightList.appendChild(middleLi);
+       middleList.appendChild(middleLi);
        return brewery;
    };
+
+
+
 
 
 let rightBtn = document.querySelector("#beerLocationBtn");
@@ -86,7 +95,7 @@ rightBtn.addEventListener("mouseenter", e => {
 }, false);
 
 rightBtn.addEventListener("mouseleave", e =>{
-    e.target.style.background = "yellow"
+    e.target.style.background = "green"
 }, false);
 
 
