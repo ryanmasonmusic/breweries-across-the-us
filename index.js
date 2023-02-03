@@ -105,3 +105,12 @@ function renderLocation(brewery){
         rightList.appendChild(rightLi);
         return brewery;
 }
+
+
+
+let title = document.querySelector("titleBrew");
+
+title.addEventListener("dbclick", e => {
+    e.body.style.background.toggle("rgb(198, 156, 4)");
+});
+
