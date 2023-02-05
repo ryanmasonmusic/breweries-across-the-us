@@ -107,10 +107,15 @@ function renderLocation(brewery){
 }
 
 
+let colorBtn = document.querySelector("#colorBtn")
 
-let title = document.querySelector("titleBrew");
+colorBtn.addEventListener("dblclick", () => {
 
-title.addEventListener("dbclick", e => {
-    e.body.style.background.toggle("rgb(198, 156, 4)");
+    let backColor = document.body.style.backgroundColor;
+
+    if (backColor === 'white') {
+        document.body.style.backgroundColor = "orange";
+    } else {
+        document.body.style.backgroundColor = "white";
+    }
 });
-

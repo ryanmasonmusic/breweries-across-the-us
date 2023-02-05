@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 }
 
+#lastButtonContainer{
+    text-align: right;
+}
+
 .paragraph {
     margin-left: auto;
     margin-right: auto;
