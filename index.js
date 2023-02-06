@@ -49,6 +49,14 @@ let beerType = document.querySelector(".beerType");
 
 beerType.style.display = "none";
 
+function renderBeers(brewery) {
+    let middleLi = document.createElement("li");
+       middleLi.innerText = brewery.brewery_type;
+       middleList.appendChild(middleLi);
+       return brewery;
+   };
+
+
 middleBtn.addEventListener("click", () => {
     if (beerType.style.display === "none"){
         beerType.style.display = "block"
@@ -65,12 +73,6 @@ middleBtn.addEventListener("mouseleave", e =>{
     e.target.style.background = "yellow"
 }, false);
 
-function renderBeers(brewery) {
-    let middleLi = document.createElement("li");
-       middleLi.innerText = brewery.brewery_type;
-       middleList.appendChild(middleLi);
-       return brewery;
-   };
 
 
 
@@ -80,7 +82,14 @@ let rightBtn = document.querySelector("#beerLocationBtn");
 
 let beerLocation = document.querySelector(".beerLocation");
    
-beerLocation.style.display = "none";   
+beerLocation.style.display = "none";  
+
+function renderLocation(brewery){
+    let rightLi = document.createElement("li");
+        rightLi.innerText = brewery.state;
+        rightList.appendChild(rightLi);
+        return brewery;
+}
 
 rightBtn.addEventListener("click", () => {
     if (beerLocation.style.display === "none"){
@@ -99,12 +108,7 @@ rightBtn.addEventListener("mouseleave", e =>{
 }, false);
 
 
-function renderLocation(brewery){
-    let rightLi = document.createElement("li");
-        rightLi.innerText = brewery.state;
-        rightList.appendChild(rightLi);
-        return brewery;
-}
+
 
 
 let colorBtn = document.querySelector("#colorBtn")
