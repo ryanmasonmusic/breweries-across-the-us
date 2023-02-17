@@ -1,25 +1,33 @@
-let list = document.getElementById("breweryList");
+const list = document.getElementById("breweryList");
 
-let middleList = document.getElementById("beerList")
+const middleList = document.getElementById("beerList")
 
-let rightList = document.getElementById("locationList");
+const rightList = document.getElementById("locationList");
 
-let breweryList = [];
+const breweryList = [];
 
 fetch("http://localhost:3000/breweries")
 .then (response => response.json())
-.then ((brewery)=>brewery.forEach((brewery => {renderBrewery(brewery);renderBeers(brewery);renderLocation(brewery)})))
+.then ((brewery)=> { 
+    brewery.forEach((brewery => {
+        renderBrewery(brewery);
+        renderBeers(brewery);
+        renderLocation(brewery)
+    }))
+})
+
 
 function renderBrewery(brewery){
-    let li = document.createElement("li");
+    const li = document.createElement("li");
         li.innerText = brewery.name;
         list.appendChild(li);
         return brewery;
 };
 
-let btn = document.querySelector("#beerBtn");
 
-let brewList = document.querySelector(".brewList");
+const btn = document.querySelector("#beerBtn");
+
+const brewList = document.querySelector(".brewList");
 
 brewList.style.display = "none";
 
@@ -43,14 +51,14 @@ btn.addEventListener("mouseleave", e =>{
 
 
 
-let middleBtn = document.querySelector("#beerTypeBtn");
+const middleBtn = document.querySelector("#beerTypeBtn");
 
-let beerType = document.querySelector(".beerType");
+const beerType = document.querySelector(".beerType");
 
 beerType.style.display = "none";
 
 function renderBeers(brewery) {
-    let middleLi = document.createElement("li");
+    const middleLi = document.createElement("li");
        middleLi.innerText = brewery.brewery_type;
        middleList.appendChild(middleLi);
        return brewery;
@@ -78,14 +86,14 @@ middleBtn.addEventListener("mouseleave", e =>{
 
 
 
-let rightBtn = document.querySelector("#beerLocationBtn");
+const rightBtn = document.querySelector("#beerLocationBtn");
 
-let beerLocation = document.querySelector(".beerLocation");
+const beerLocation = document.querySelector(".beerLocation");
    
 beerLocation.style.display = "none";  
 
 function renderLocation(brewery){
-    let rightLi = document.createElement("li");
+    const rightLi = document.createElement("li");
         rightLi.innerText = brewery.state;
         rightList.appendChild(rightLi);
         return brewery;
@@ -111,11 +119,11 @@ rightBtn.addEventListener("mouseleave", e =>{
 
 
 
-let colorBtn = document.querySelector("#colorBtn")
+const colorBtn = document.querySelector("#colorBtn")
 
 colorBtn.addEventListener("dblclick", () => {
 
-    let backColor = document.body.style.backgroundColor;
+    const backColor = document.body.style.backgroundColor;
 
     if (backColor === 'white') {
         document.body.style.backgroundColor = "orange";
